@@ -1,7 +1,8 @@
 Title: Markdown
 Description: Study Notes on Markdown Syntax  
 Author: Dave Figueroa  
-Date: 2014-07-10  
+Date: 2014-07-10
+Updated: 2016-05-22
 Category: Notes  
 
 Markdown
@@ -20,27 +21,14 @@ This is the original Markdown specification as stated by John Gruber.  Gurber co
 ### GitHub Flavored Markdown (GFM)
 This is a well-known flavor as it's utilized throughout the GitHub website.  It has various tweaks and additions, primarily to enhance the display and readability of code.  Since it's designed to be used by coders on the GitHub site, it's processing takes into account inevitable poor practices by users or even possible malicious intent.  This would be the one to use (or at least a place to start) if you're expecting to auto-process files from users on a server.   
 
-* Syntax listed at [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown) - updated on 07Apr2014   
-* The latest build of [GFM](https://github.com/github/markup): Last known is v1.2.1 - 23Apr2014
+* Syntax listed at [Writing on GitHub](https://help.github.com/categories/writing-on-github/)   
+* The latest build of [GFM](https://github.com/github/markup): v1.3.3 - 17Feb2015
 
 ### MultiMarkdown (MMD)
 Multi-Markdown, by Fletcher T. Penny, extends the original specification to accommodate many more typography and publishing related tasks (footnotes, citations, captions, etc.) as well as more conversion types than just HTML - namely LaTeX.  It also allows for the incorporation of metadata.  
 
 * Multi-Markdown Syntax [Cheat-Sheet](https://rawgit.com/fletcher/human-markdown-reference/master/index.html)  
-* Last known build of [MultiMarkdown](http://fletcherpenney.net/multimarkdown/) : v4.5.3 - 18Apr2014  
-
-## Marked
-Marked is a MacOS app that serves as a Markdown previewer and processor.  It works well with Sublime Text (and other applications) allowing a near instantaneous HTML preview of Markdown files.  It can easily export files to HTML or PDF (and presumably others.)  The current version of Marked uses MultiMarkdown v3.2 (30May2013), but it can be configured to run any processor of your choosing in the custom settings.  The Marked app also allows for some additional syntax - primarily in comments - for pre-processing instructions (like file inclusions.)
-
-* [Marked](http:www.markedapp.com) the app  
-* Marked [Special Syntax](http://markedapp.com/help/Special_Features/Special_Syntax.html)  
-* The [Marked Bonus Pack][MBP] contains support files and instructions for integrating the Marked app with editors (like Sublime Text) and other applications.
-
-[MBP]:(http://support.markedapp.com/kb/how-to-tips-and-tricks/marked-bonus-pack-scripts-commands-and-bundles)    
-
-**Note:** Another version of the Marked app - [Marked 2][M2] is also available.  It boasts many additional features, more native export options, and presumably ships with a more recent build of MultiMarkdown.     
-
-[M2]:(http://marked2app.com/)
+* Latest build of [MultiMarkdown](http://fletcherpenney.net/multimarkdown/): v5.2.0 - 16Mar2016
 
 # Markdown Syntax
 Starting with the standard specification, Markdown syntax is comprised entirely of punctuation chosen specifically to support readability.
@@ -155,13 +143,13 @@ Strike through text is designated with double `~`:
 **Note:** Not supported in MultiMarkdown
 
 ### Fenced Code Blocks
-Code Blocks can be declared using a triple-tick ` ``` `, alleviating the need for selective indenting of each line.  
+Code Blocks can be declared using a triple-tick ` ``` ``, alleviating the need for selective indenting of each line.  
 
     '''
     Code Block
     '''
 
-**Note:** Purportedly supported in MultiMarkdown as well, but it's not properly implemented in Marked.app, not part of MMDv3.2, or glitched in the previewer (processor not tested.)
+**Note:** Purportedly supported in MultiMarkdown as well, but not tested.
 
 ### Tables
 Tables can be constructed using pipes `|` and dashes `-`
@@ -211,7 +199,7 @@ Underline {++this++} word.
 >
 Highlight {==this==} word.
 
-**Note:** Again this should work in MultiMarkdown-v4, but doesn't in default Marked.app
+**Note:** Again this should work in MultiMarkdown
 
 ### Footnotes, Endnotes, Citations and Glossary
 MultiMarkdown supports footnotes, but apparently HTML doesn't differentiate between footnotes and endnotes, so they always end up at the end of the document.
@@ -284,5 +272,3 @@ To include external files that remain untouched, i.e. not processed, use bracket
 < <\{folder/filename\}
 
 Naturally, this last option should already be well formatted.
-
-**Note:** Marked2.app offers additional syntax for formatting a Table of Contents
