@@ -1,9 +1,12 @@
-Title: Markdown
+---
+Title: Markdown  
 Description: Study Notes on Markdown Syntax  
 Author: Dave Figueroa  
-Date: 2014-07-10
-Updated: 2016-05-22
-Category: Notes  
+Date: 2014-07-10  
+Updated: 2016-05-30  
+Category: Notes
+Status: Working Draft  
+---
 
 Markdown
 ================
@@ -11,7 +14,7 @@ Markdown was created in 2004 by John Gruber.  It allows for plain-text formattin
 
 Markdown Flavors
 ----------------
-Since its inception, there have been numerous adjustments and additions to  Markdown.  Markdown's popularity along with it's lack of an evolving standard has spawned myriad pop-up flavors, most serving a specific niche.  These are the three flavors supported by Brett Terpstra's _MarkdownEditing_ package for **_Sublime Text_**.
+Since its inception, there have been numerous adjustments and additions to Markdown.  Markdown's popularity along with it's lack of an evolving standard has spawned myriad pop-up flavors, most serving a specific niche.  These are the three major flavors supported by Brett Terpstra's _MarkdownEditing_ package for **_Sublime Text_**.
 
 ### Standard Markdown (MD)
 This is the original Markdown specification as stated by John Gruber.  Gurber considers it complete and has not adjusted it - or even commented on it - in years.  Standard Markdown is deliberately minimalistic.
@@ -19,21 +22,21 @@ This is the original Markdown specification as stated by John Gruber.  Gurber co
 * Complete Syntax listed at [Daring Fireball](http://daringfireball.net/projects/markdown/syntax) : v1.0.1 - 17Dec2004
 
 ### GitHub Flavored Markdown (GFM)
-This is a well-known flavor as it's utilized throughout the GitHub website.  It has various tweaks and additions, primarily to enhance the display and readability of code.  Since it's designed to be used by coders on the GitHub site, it's processing takes into account inevitable poor practices by users or even possible malicious intent.  This would be the one to use (or at least a place to start) if you're expecting to auto-process files from users on a server.   
+This is a well-known flavor as it's utilized throughout the GitHub website.  It has various tweaks and additions, primarily to enhance the display and readability of code.  Since it's designed to be used by coders on the GitHub site, it's processing takes into account inevitable poor practices by users or even possible malicious intent.
 
 * Syntax listed at [Writing on GitHub](https://help.github.com/categories/writing-on-github/)   
-* The latest build of [GFM](https://github.com/github/markup): v1.3.3 - 17Feb2015
+* The latest build of [GFM](https://github.com/github/markup)  
 
 ### MultiMarkdown (MMD)
 Multi-Markdown, by Fletcher T. Penny, extends the original specification to accommodate many more typography and publishing related tasks (footnotes, citations, captions, etc.) as well as more conversion types than just HTML - namely LaTeX.  It also allows for the incorporation of metadata.  
 
 * Multi-Markdown Syntax [Cheat-Sheet](https://rawgit.com/fletcher/human-markdown-reference/master/index.html)  
-* Latest build of [MultiMarkdown](http://fletcherpenney.net/multimarkdown/): v5.2.0 - 16Mar2016
+* Latest build of [MultiMarkdown](http://fletcherpenney.net/multimarkdown/)
 
 # Markdown Syntax
 Starting with the standard specification, Markdown syntax is comprised entirely of punctuation chosen specifically to support readability.
 
-**Note:** This is intended to be a comprehensive, but not exhaustive, listing of specific Markdown syntaxes.  For complete reference, consult original sources (the links above.)  
+**Note:** This is intended to be a somewhat comprehensive, but not exhaustive, listing of specific Markdown syntaxes.  For complete reference, consult original sources (the links above.)  
 
 ## Block Level Elements
 
@@ -41,23 +44,23 @@ Starting with the standard specification, Markdown syntax is comprised entirely 
 Headers can be defined _Setext_ style:
 
 >Heading (h1)  
- ================  
+ \=================
 
 by placing equals signs `=` under the heading
 
 >Subheading (h2)  
- ----------------  
+ \----------------  
 
 by placing dashes `-` under the subheading
 
 Headers can also be defined _atx_ style (h1-h6) by using the number-sign `#`
->
- # Heading 1  
- ## Heading 2  
- ### Heading 3  
- #### Heading 4  
- ##### Heading 5  
- ###### Heading 6  
+>  
+ \# Heading 1  
+ \## Heading 2  
+ \### Heading 3  
+ \#### Heading 4  
+ \##### Heading 5  
+ \###### Heading 6  
 
 ### Paragraphs and line breaks
 Paragraphs are defined whenever text is preceded by a blank line.  Lines are hard-wrapped so the next line with be appended to the previous unless separated by a blank line.  To enforce a new-line without adding a blank line, insert **two spaces** after the last character in a line before the carriage-return.
@@ -65,22 +68,21 @@ Paragraphs are defined whenever text is preceded by a blank line.  Lines are har
 ### Blockquotes
 Blockquotes are defined by preceding a block with the right angle-bracket.  The '>' is only necessary at the beginning of the block, but one per line helps readability.  Blockquotes can be nested.
 
->
- > Those who believe in telekinesis, raise my hand.  
- > ~ Kurt Vonnegut
+>\> Quote
+>>\> \> Those who believe in telekinesis, raise my hand.  \> \> ~ Kurt Vonnegut
 
 ### Lists
 Unordered Lists are defined using th `*`, `+`, or `-`
->
- \* Item 1  
+
+>\* Item 1  
  \* Item 2  
  \* Item 3  
 
 Ordered Lists are defined using numbers (the actual number doesn't matter.)
->
-_1. First_  
-_2. Second_  
-_3. Third_  
+
+>_1. First_  
+ _2. Second_  
+ _3. Third_  
 
 ### Code Blocks
 Code blocks are defined by indenting four spaces (notionally one full tab.)
@@ -134,13 +136,9 @@ In standard Markdown emphasis can exist in the middle of a word: 'un\_frigging\_
 
 This has undesirable effect within code such as: `user_last_name`, so the intra-word emphasis ability has been disabled.
 
-**Note:** Also Supported in MultiMarkdown!
-
 ### Strikethrough
 Strike through text is designated with double `~`:  
 '~~Mistake~~' becomes <del>Mistake</del>  
-
-**Note:** Not supported in MultiMarkdown
 
 ### Fenced Code Blocks
 Code Blocks can be declared using a triple-tick ` ``` ``, alleviating the need for selective indenting of each line.  
@@ -148,8 +146,6 @@ Code Blocks can be declared using a triple-tick ` ``` ``, alleviating the need f
     '''
     Code Block
     '''
-
-**Note:** Purportedly supported in MultiMarkdown as well, but not tested.
 
 ### Tables
 Tables can be constructed using pipes `|` and dashes `-`
@@ -159,23 +155,36 @@ Tables can be constructed using pipes `|` and dashes `-`
       John     |   Doe
       Jane     |   Moe
 
-Tables don't *have* to line up neatly to render properly in HTML. A color `:` can also be used to designate if a column is right or left aligned:
+makes:  
+
+First Name | Last Name
+-----------|----------
+  John     |   Doe
+  Jane     |   Moe
+
+Tables don't *have* to line up neatly to render properly in HTML. A colon `:` can also be used to designate if a column is right or left aligned:
 
     left aligned| right aligned
-    :-----------|----------:
-    John        |        Doe
-    Jane        |        Moe
+    :--|--:
+    John | Doe
+    Jan | Moe
 
-**Note:** Also supported in MultiMarkdown! MMD allows for table names too - placed in square brackets at bottom of the table.
+  left aligned| right aligned
+  :--|--:
+  John | Doe
+  Jan | Moe
 
 ### Syntax Highlighting
-The GitHub website also provides syntax highlighting for various programming languages as well.
+The GitHub website also provides syntax highlighting for Markdown and various programming languages as well.
 
 ## MultiMarkdown Syntax
 MultiMarkdown syntax is the most comprehensive in this listing.  This is because while Markdown was intended for plain-text to HTML, MultiMarkdown extends the concept to publishing formats as well.
 
 ### Metadata
 Metadata must be a the beginning of the file, each item at beginning of the line, and specified as a `name: value` pair.  The metadata block should be followed by a blank line.
+
+### Tables
+As in GFM tables are also supported in MultiMarkdown.   MMD allows for table names too - placed in square brackets at bottom of the table.
 
 ### Definition Lists
 The term is immediately followed by a carriage return, and then a colon `:` on the newline followed by the definition:
@@ -198,8 +207,6 @@ Underline {++this++} word.
 
 >
 Highlight {==this==} word.
-
-**Note:** Again this should work in MultiMarkdown
 
 ### Footnotes, Endnotes, Citations and Glossary
 MultiMarkdown supports footnotes, but apparently HTML doesn't differentiate between footnotes and endnotes, so they always end up at the end of the document.
@@ -244,9 +251,9 @@ Here are samples of how to incorporate math formulas:
 >x~z,y     
 >x~z,y~  
 
-**Note:** Again this doesn't render properly in HTML, but is presumably very powerful in LaTeX.
+**Note:** This doesn't seem to render properly in HTML, but is presumably very powerful in LaTeX.
 
-## Marked app Syntax
+## Marked app Syntax  
 These are special commands specific to the Marked.app program itself.  They serve as preprocessor commands to influence the conversion process.  As in MultiMarkdown some commands are specific to publishing conventions rather than HTML.  
 
 ## Page Breaks
