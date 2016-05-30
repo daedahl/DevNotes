@@ -44,7 +44,7 @@ Starting with the standard specification, Markdown syntax is comprised entirely 
 Headers can be defined _Setext_ style:
 
 >Heading (h1)  
- \=================
+ \\=================
 
 by placing equals signs `=` under the heading
 
@@ -150,11 +150,12 @@ Code Blocks can be declared using a triple-tick ` ``` ``, alleviating the need f
 ### Tables
 Tables can be constructed using pipes `|` and dashes `-`
 
+```
     First Name | Last Name
     -----------|----------
       John     |   Doe
       Jane     |   Moe
-
+```
 makes:  
 
 First Name | Last Name
@@ -164,10 +165,12 @@ First Name | Last Name
 
 Tables don't *have* to line up neatly to render properly in HTML. A colon `:` can also be used to designate if a column is right or left aligned:
 
+```
     left aligned| right aligned
     :--|--:
     John | Doe
     Jan | Moe
+```
 
   left aligned| right aligned
   :--|--:
@@ -194,7 +197,7 @@ Word
 
 Looks like:
 
->Word
+Word
 : definition goes here
 
 ### Red Ink
@@ -236,7 +239,7 @@ Head up to the top of this section \[MultiMarkdown Syntax\]\[\].
 
 becomes:  
 
-> Head up to the top of this section [MultiMarkdown Syntax][].
+Head up to the top of this section [MultiMarkdown Syntax][].
 
 > ###### Sample Heading \[customID\]
 
