@@ -1,13 +1,3 @@
----
-Title: Markdown  
-Description: Study Notes on Markdown Syntax  
-Author: Dave Figueroa  
-Date: 2014-07-10  
-Updated: 2016-05-30  
-Category: Notes
-Status: Working Draft  
----
-
 Markdown
 ================
 Markdown was created in 2004 by John Gruber.  It allows for plain-text formatting with little to no markup and easy conversion to HTML.  Its focus is on readability.  It's syntax is simple and deliberately limited - not intended for comprehensive conversion.  

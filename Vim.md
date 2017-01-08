@@ -1,11 +1,3 @@
-Title: VIM
-Description: study notes on VIM use  
-Author: Dave Figueroa  
-Date: 2014-06-06
-Status: working  
-BestBy: 2019-06-05  
-Category: Notes  
-
 ViM -- VIsual IMproved
 ======================
 

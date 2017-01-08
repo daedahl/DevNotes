@@ -1,16 +1,8 @@
-Title: Using the Atom Editor
-Description: notes on using Atom
-Author: Dave Figueroa
-Date: 2016-05-21
-Status: draft
-Updated: 2016-05-21
-Category: Notes
-
 Using the Atom Editor
 =====================
 
 Keyboard Shortcuts
-------------------
+---------------------
 
 ### Cut, Copy & Paste
 - Cut = ⌘ + X
@@ -63,5 +55,8 @@ Keyboard Shortcuts
 ## Packages and Themes
 How to
 
-Emmet
+### Installed Packages
+Emmet  
 Pigment
+
+[resolving keyboard shortcuts](http://stackoverflow.com/questions/32988215/how-to-resolve-keybinding-conflicts-in-atom-io "solution onstackoverflow")

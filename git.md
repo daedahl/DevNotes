@@ -1,13 +1,3 @@
----
-Title: git  
-Description: Study Notes on Git  
-Author: Dave Figueroa  
-Date: 2017-01-07
-Updated: -
-Category: Notes
-Status: rough draft
----
-
 # Git
 Version Control System and Source Code Management Tool
 
